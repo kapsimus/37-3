@@ -17,77 +17,15 @@ Window {
         rowSpacing: 2
         columnSpacing: 2
         Layout.fillWidth : true
-
-        Button {
-            text: "1"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "2"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "3"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "4"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "5"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "6"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "7"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "8"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
-            }
-        }
-        Button {
-            text: "9"
-            Layout.fillWidth : true
-            height: maingrid.buttonheight
-            onClicked: {
-                disp.ch = text
+        Repeater{
+            model: ["1","2","3","4","5","6","7","8","9"]
+            Button {
+                text: modelData
+                Layout.fillWidth : true
+                height: maingrid.buttonheight
+                onClicked: {
+                    disp.ch = text
+                }
             }
         }
         Button {
