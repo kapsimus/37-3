@@ -66,7 +66,8 @@ Window {
             Layout.row: 4
             height: maingrid.buttonheight
             onClicked: {
-                disp.vol++
+                disp.vol+=10
+                if (disp.vol > 100) disp.vol = 100
             }
         }
         Button {
@@ -76,7 +77,7 @@ Window {
             Layout.row: 5
             height: maingrid.buttonheight
             onClicked: {
-                disp.vol--
+                disp.vol-=10
                 if (disp.vol < 0) disp.vol = 0
             }
         }
@@ -85,7 +86,7 @@ Window {
     ColumnLayout {
         id: disp
         property int ch: 1
-        property int vol: 5
+        property int vol: 10
         y: maingrid.height + 30
         Text {
             id: chanel
@@ -96,7 +97,7 @@ Window {
             id: volume
             y: maingrid.height + 30
             font.pointSize: 14
-            text: qsTr("volume: " + disp.vol)
+            text: qsTr("volume: " + disp.vol + "%")
         }
     }
 
