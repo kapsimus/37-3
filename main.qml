@@ -83,22 +83,26 @@ Window {
         }
 
     }
-    ColumnLayout {
-        id: disp
-        property int ch: 1
-        property int vol: 10
+    Rectangle {
+        color: "lightblue"
+        x: 0
         y: maingrid.height + 30
-        Text {
-            id: chanel
-            font.pointSize: 14
-            text: qsTr("Chanel: " + disp.ch)
-        }
-        Text {
-            id: volume
-            y: maingrid.height + 30
-            font.pointSize: 14
-            text: qsTr("volume: " + disp.vol + "%")
+        width: maingrid.width
+        height: disp.height
+        ColumnLayout {
+            id: disp
+            property int ch: 1
+            property int vol: 10
+            Text {
+                id: chanel
+                font.pointSize: 14
+                text: qsTr("Chanel: " + disp.ch)
+            }
+            Text {
+                id: volume
+                font.pointSize: 14
+                text: qsTr("volume: " + disp.vol + "%")
+            }
         }
     }
-
 }
